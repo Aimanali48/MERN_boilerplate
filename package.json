@@ -1,0 +1,19 @@
+{
+  "name": "cvgenerator",
+  "version": "1.0.0",
+  "description": "a MERN stack application",
+  "main": "server.js",
+  "scripts": {
+    "start": "nodemon server.js"
+  },
+  "author": "Aiman Ali",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "mongoose": "^5.4.8"
+  },
+  "devDependencies": {
+    "nodemon": "^1.18.9"
+  }
+}
