@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Resume from './resume';
+import '../styles/style.css'
 class Profile extends Component {
     constructor(props) {
         super(props);
@@ -91,15 +92,17 @@ handleUpdate = c => {
 
     render() { 
         return (<React.Fragment>
-            <div>
+            <div className="container">
            <form onSubmit={this.handleSubmit}>
-               <h3>Name and message :</h3>
+           <h3>MERN Boilerplate.</h3>
+           <strong>Name:</strong><br/>
                <input type="text" name="name" value={this.state.name||""} ref={this.name} onChange={this.handleChange} /><br/>
-               <input type="text" name="message" value={this.state.message||""} ref={this.message} onChange={this.handleChange} /><br/>
-               <input type="submit"/>
+               <strong>Message:</strong><br/>
+               <input type="text" name="message" value={this.state.message||""} ref={this.message} onChange={this.handleChange} />
+              <br/><input type="submit" value="comment"/>&nbsp;
              </form>
              <button onClick={() => this.handleUpdate(this.state)}>Update</button>
-             </div>
+            </div><br/>
          
              <Resume data = {this.state.data} onDelete={this.handleDelete} onEdit={this.handleEdit} />
             </React.Fragment> );
