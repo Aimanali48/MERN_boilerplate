@@ -21,6 +21,7 @@ class Profile extends Component {
      this.getAll()
  }
 
+//FETCH API GET
     getAll = () => {
         fetch('/data/api')
         .then(res => res.json())
@@ -29,10 +30,11 @@ class Profile extends Component {
     }
 
 
+  //FETCH API POST
    handleSubmit = e => {
        e.preventDefault()
        let {name , message} = this.state
-
+       
        fetch("/data/api", {
         headers: {
           Accept: "application/json",
@@ -44,6 +46,8 @@ class Profile extends Component {
       
    }
 
+//FETCH API DELETE   
+   
 handleDelete = id => {
     const confirm = window.confirm("are you sure?");
     if (confirm) {
@@ -68,6 +72,7 @@ handleEdit = c => {
 
 
 
+//FETCH API UPDATE
 handleUpdate = c => {
      console.log(c._id)
     fetch(`/data/api/${c._id}`, {
